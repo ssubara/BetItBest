@@ -5,17 +5,109 @@ body {
 }
 
 header {
-	background: red;
+    width: 100%;
+    position: fixed;
+	background: white;
+    min-height: 60px;
+    -webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49);
+    -moz-box-shadow:    0px 3px 5px rgba(100, 100, 100, 0.49);
+    box-shadow:         0px 3px 5px rgba(100, 100, 100, 0.49);
 }
 
 footer {
-	background: black;
+	background: #262626;
 	color: white;
 	text-align: center;
-	position: fixed;
+	
     left: 0;
     bottom: 0;
     width: 100%;
+}
+
+
+/* --------------------------------------------------
+ Menu & Logo
+-------------------------------------------------- */
+.top {
+    width: auto;
+    height: 20px;
+    margin: 0 auto;
+    background-color: black;
+    overflow:auto;
+}
+
+.top-menu {
+    display: inline-block;
+    float: right;
+    margin-top: -3px;
+    position: relative;
+}
+
+.top-links {
+    display: inline-block;
+    color: white;
+    font-size: 12px;
+    padding-right: 5px;
+    vertical-align: baseline;
+}
+
+.top-links a {
+    color:white;
+    text-decoration: none;
+}
+
+.navbar {
+    padding:0;
+}
+
+.logo {
+    display: block;
+    padding: 5px 26px 5px 0;
+    float: left;
+}
+
+.logo img {
+    display: block;
+    max-height: 30px;
+}
+
+.menunav {
+    margin: 0;
+    padding: 0;
+}
+.menunav li {
+    display: block;
+    float: left;
+}
+.menunav li a {
+    text-transform: uppercase;
+    color: #464646;
+    display: block;
+    height: 60px;
+    font-size: 12px;
+    line-height: 60px;
+    padding: 0 25px;
+    font-weight: 300;
+    text-decoration: none;
+}
+.menunav li a:hover {
+    color: white;
+    background: #6f1111;
+}
+.menunav li a.active:hover {
+    text-decoration: none;
+}
+.menunav li a.active {
+    color: #fff;
+    background: #6f1111;
+}
+
+/* --------------------------------------------------
+ Main
+-------------------------------------------------- */
+.bg-main {
+    background-color: lightgrey;
+
 }
 
 .margin-bt-5 {
@@ -24,6 +116,14 @@ footer {
 
 .margin-bt-2 {
 	margin-bottom: 2%;
+}
+
+.padding60 {
+    padding-top: 60px;
+}
+
+.bottom60 {
+    padding-bottom: 60px;
 }
 
 .center {
@@ -44,7 +144,14 @@ footer {
 .error {
 	display: block;
     padding: 15px 26px 15px 0;
-    min-height: 60px
+    min-height: 60px;
+    margin-top: 30px;
+}
+
+.warning {
+    font-family: 'Exo 2', sans-serif;
+
+
 }
 
 .bg-search {
@@ -84,5 +191,205 @@ footer {
 	text-decoration: none;
 	color: white;
 	background: #3c0404;
+}
+
+/* --------------------------------------------------
+ Chat Bot
+-------------------------------------------------- */
+
+.corner {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: none;
+    z-index: 500;
+    width: 350px;
+    height: 430px;
+}
+
+.btn-closer-chat{
+    display: block;
+    width: 1.25em;
+    height: 1.25em;
+    position: fixed;
+    right: 20px;
+    bottom: 400px;
+    color: white;
+}
+
+.btn-closer-chat:hover{
+  
+    color: #6f1111;
+}
+
+
+
+/* --------------------------------------------------
+ Full Screen Overlay
+-------------------------------------------------- */
+.canvas-overlay,
+.fancybox-overlay {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, .9);
+}
+
+
+.canvas-overlay {
+    color: #eaeaea;
+}
+
+.canvas-overlay h1,
+.canvas-overlay h2,
+.canvas-overlay h3,
+.canvas-overlay h4,
+.canvas-overlay h5,
+.canvas-overlay h6{
+    color: #fff;
+}
+
+
+
+a.btn-closer::after,
+a.btn-closer::before,
+.fancybox-close:before,
+.fancybox-close:after {
+    background:#fff;
+}
+
+a.btn-closer:hover::after,
+a.btn-closer:hover::before,
+.fancybox-close:hover::before,
+.fancybox-close:hover::after {
+    background: #6f1111;
+}
+
+
+.canvas-overlay {
+    display:none;
+    position:absolute;
+    top:0;
+    height:100%;
+    width:100%;
+    overflow:auto;
+    z-index:999;
+}
+
+.canvas-overlay .container{
+    margin-top: 5%;
+}
+
+
+.btn-closer{
+    display: block;
+    width: 1.25em;
+    height: 1.25em;
+    position: fixed;
+    right: 20px;
+    top: 15px;
+}
+
+.btn-closer:before,
+.btn-closer:after{
+    height: 2px;
+    width: 1.25em;
+    line-height: 1.25em;
+    background: #fff;
+    content: "";
+    display: block;
+    right: 20px;
+    top: 24px;
+    position: fixed;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -ms-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+}
+
+.btn-closer:before{
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.btn-closer:after{
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.btn-closer:hover:before,
+.btn-closer:hover:after{
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.card-header {
+    background-color: #6f1111;
+    color: white;
+}
+
+.card-header a {
+    text-decoration: none;
+    color: white;
+}
+
+.card-body {
+    color: black;
+}
+
+/* --------------------------------------------------
+ Footer
+-------------------------------------------------- */
+
+#top_footer {
+    height: 26px;
+    /* padding-right: 20%; */
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    -webkit-transition: 1s;
+    transition: 1s;
+    overflow: auto;
+    
+    left: 0;
+    bottom: 0;
+    
+    width: 100%;
+    text-align: center;
+}
+
+#top_footer .menu .col{
+    width: 20%;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+
+}
+#top_footer img {
+    height: 3em !important;
+    margin: 0 4em;
+}
+#top_footer .menu{
+    padding-top: .2em;
+    background-color: #262626 !important;
+    color: white !important;
+}
+#top_footer .padding.clearfix{
+    padding-bottom: 1em;
+}
+#top_footer .menu .col ul a{
+    color: white;
+}
+
+ul {
+  list-style-type: none;
 }
 
