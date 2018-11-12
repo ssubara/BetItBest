@@ -79,6 +79,7 @@ footer {
 .menunav {
     margin: 0;
     padding: 0;
+    font-weight: 700;
 }
 .menunav li {
     display: block;
@@ -86,26 +87,27 @@ footer {
 }
 .menunav li a {
     text-transform: uppercase;
-    color: #464646;
     display: block;
     height: 60px;
     font-size: 12px;
     line-height: 60px;
     padding: 0 25px;
-    font-weight: 300;
     text-decoration: none;
+    color: black;
 }
 .menunav li a:hover {
-    color: white;
+    color:white;
     background: #6f1111;
 }
 .menunav li a.active:hover {
     text-decoration: none;
+    color: white;
 }
 .menunav li a.active {
     color: #fff;
     background: #6f1111;
 }
+
 
 /* --------------------------------------------------
  Main
